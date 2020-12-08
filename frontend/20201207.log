@@ -1,0 +1,1856 @@
+
+
+> my-app@0.1.0 start /var/pastas/testeSocial/my-app
+> react-scripts start -p 5000
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.17.0.2/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /var/pastas/testeSocial/my-app/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+Starting the development server...
+
+Compiled successfully!
+
+You can now view my-app in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://172.17.0.2:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 57:3:  'e' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected keyword 'this' (62:29)
+
+  60 | 	render() {
+  61 | 		return (
+> 62 | 			<Form onSubmit={(e) => ({this.incluir(); e.preventDefault()})}>
+     | 			                         ^
+  63 | 				<Card>
+  64 | 					<Card.Header>
+  65 | 						Incluir Mensagem
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected keyword 'this' (62:30)
+
+  60 | 	render() {
+  61 | 		return (
+> 62 | 			<Form onSubmit={(e) => ({ this.incluir(); e.preventDefault() })}>
+     | 			                          ^
+  63 | 				<Card>
+  64 | 					<Card.Header>
+  65 | 						Incluir Mensagem
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 57:3:  'e' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 57:3:  'e' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 57:3:  'e' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 57:3:  'e' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled with warnings.
+
+src/Mensagens.js
+  Line 3:16:  'uuid_v4' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (13:2)
+
+  11 | 
+  12 | const Mensagem_defaultAttrs = {
+> 13 | 	,
+     | 	^
+  14 | 	titulo: '',
+  15 | 	conteudo: ''
+  16 | }
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Expected corresponding JSX closing tag for <Accordion> (90:4)
+
+  88 | 					</Card.Body>
+  89 | 				</Card>
+> 90 | 			</Form>
+     | 			^
+  91 | 		);
+  92 | 	}
+  93 | }
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Expected corresponding JSX closing tag for <Accordion> (90:4)
+
+  88 | 					</Card.Body>
+  89 | 				</Card>
+> 90 | 			</Form>
+     | 			^
+  91 | 		);
+  92 | 	}
+  93 | }
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (91:4)
+
+  89 | 					</Card>
+  90 | 				</
+> 91 | 			</Form>
+     | 			^
+  92 | 		);
+  93 | 	}
+  94 | }
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 61:6:  'Accordion' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Expected corresponding JSX closing tag for <Accordion.Toggle> (68:7)
+
+  66 | 								<i className="fas fa-plus"></i>
+  67 | 							</Button>
+> 68 | 						</Card.Header>
+     | 						^
+  69 | 						<Card.Body>
+  70 | 							<Card.Text>
+  71 | 								<Form.Group controlId="inclusao.titulo">
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Expected corresponding JSX closing tag for <Accordion.Toggle> (68:7)
+
+  66 | 								<i className="fas fa-plus"></i>
+  67 | 							</Button>
+> 68 | 						</Card.Header>
+     | 						^
+  69 | 						<Card.Body>
+  70 | 							<Card.Text>
+  71 | 								<Form.Group controlId="inclusao.titulo">
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 61:6:  'Accordion' is not defined  react/jsx-no-undef
+  Line 63:8:  'Accordion' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (144:2)
+
+  142 | 
+  143 | export function ConteudoMensagem(props) {
+> 144 | 	return (
+      | 	^
+  145 | 		<ContextoMensagemSelecionada.Consumer>
+  146 | 			{ (selecionada) => {
+  147 | 				if (!selecionada) {
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (144:2)
+
+  142 | 
+  143 | export function ConteudoMensagem(props) {
+> 144 | 	return (
+      | 	^
+  145 | 		<ContextoMensagemSelecionada.Consumer>
+  146 | 			{ (selecionada) => {
+  147 | 				if (!selecionada) {
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Expected corresponding JSX closing tag for <Accordion.Collapse> (140:5)
+
+  138 | 						</Card.Body>
+  139 | 						
+> 140 | 				</Card>
+      | 				^
+  141 | 			</Accordion>
+  142 | 		);
+  143 | 	}
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Expected corresponding JSX closing tag for <Accordion.Collapse> (166:7)
+
+  164 | 									</Card.Text>
+  165 | 								</Card.Body>
+> 166 | 						</Card>
+      | 						^
+  167 | 					</Accordion>
+  168 | 				);
+  169 | 			} }
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled with warnings.
+
+src/Mensagens.js
+  Line 150:9:  'interno' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagens.js
+  Line 150:9:   'interno' is assigned a value but never used  no-unused-vars
+  Line 159:10:  'interno' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagens.js
+  Line 159:6:  'interno' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagens.js
+  Line 159:6:  'interno' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagens.js
+  Line 154:6:  'interno' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/App.js
+  Line 21:7:  'CardGroup' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/App.js
+Syntax error: Expected corresponding JSX closing tag for <CardColumns> (26:6)
+
+  24 | 							<ListaMensagens />
+  25 | 							<ConteudoMensagem />
+> 26 | 					</CardDeck>
+     | 					^
+  27 | 				</Mensagens>
+  28 | 			</div>
+  29 | 		);
+Compiling...
+Failed to compile.
+
+src/App.js
+  Line 22:8:  'CardColumns' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Expected corresponding JSX closing tag for <Form> (91:6)
+
+  89 | 							</Card.Body>
+  90 | 						</Accordion.Collapse>
+> 91 | 					</Card>
+     | 					^
+  92 | 				</Accordion>
+  93 | 			</Form>
+  94 | 		);
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled with warnings.
+
+src/App.js
+  Line 2:18:  'CardDeck' is defined but never used     no-unused-vars
+  Line 2:28:  'CardColumns' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled with warnings.
+
+src/Mensagens.js
+  Line 67:13:  Style prop value must be an object  react/style-prop-object
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 67:30:  'inline' is not defined  no-undef
+  Line 67:37:  'block' is not defined   no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (67:57)
+
+  65 | 							Incluir Mensagem
+  66 | 							</span>
+> 67 | 							<div style={{display: 'inline-block', width: 100%}}>
+     | 							                                                 ^
+  68 | 								<Button className="float-right clearfix" type="submit">
+  69 | 									<i className="fas fa-plus"></i>
+  70 | 								</Button>
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Expected corresponding JSX closing tag for <span> (71:8)
+
+  69 | 									<i className="fas fa-plus"></i>
+  70 | 								</Button>
+> 71 | 							</div>
+     | 							^
+  72 | 						</Accordion.Toggle>
+  73 | 						<Accordion.Collapse eventKey="0">
+  74 | 							<Card.Body>
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token, expected "," (65:55)
+
+  63 | 						<Accordion.Toggle as={Card.Header} eventKey="0">
+  64 | 							<div style={{display: 'inline-block', width: '100%'}}>
+> 65 | 								<div style={{display: 'inline-block', vertical-align: 'middle'}}>
+     | 								                                              ^
+  66 | 									Incluir Mensagem
+  67 | 								</div>
+  68 | 								<Button className="float-right clearfix" type="submit">
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/App.js
+  Line 21:7:   'Container' is not defined  react/jsx-no-undef
+  Line 22:9:   'Row' is not defined        react/jsx-no-undef
+  Line 23:11:  'Col' is not defined        react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Expected corresponding JSX closing tag for <div> (74:7)
+
+  72 | 								</Button>
+  73 | 							</div>
+> 74 | 						</Accordion.Toggle>
+     | 						^
+  75 | 						<Accordion.Collapse eventKey="0">
+  76 | 							<Card.Body>
+  77 | 								<Card.Text>
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (69:24)
+
+  67 | 								</div>
+  68 | 								<div className="float-right clearfix">
+> 69 | 									<spanclassName="blockquote-footer">expansivel</span>
+     | 									              ^
+  70 | 									<Button type="submit">
+  71 | 										<i className="fas fa-plus"></i> Incluir
+  72 | 									</Button>
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Expected corresponding JSX closing tag for <Card.Header> (100:5)
+
+   98 | 						</Card.Body>
+   99 | 					</Accordion.Collapse>
+> 100 | 				</Card>
+      | 				^
+  101 | 			</Accordion>
+  102 | 		);
+  103 | 	}
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected keyword 'this' (29:20)
+
+  27 | 	}
+  28 | 	
+> 29 | 	addChangeListener(this.handleChange);
+     | 	                  ^
+  30 | 	removeChangeListener(listener) {
+  31 | 		
+  32 | 	}
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (72:7)
+
+  70 | 
+  71 | 	validacaoCS() {
+> 72 | 		if ()
+     | 		    ^
+  73 | 		'Não deve ser vazio'
+  74 | 	}
+  75 |
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (72:7)
+
+  70 | 
+  71 | 	validacaoCS() {
+> 72 | 		if ()
+     | 		    ^
+  73 | 		'Não deve ser vazio'
+  74 | 	}
+  75 |
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (72:7)
+
+  70 | 
+  71 | 	validacaoCS() {
+> 72 | 		if ()
+     | 		    ^
+  73 | 		'Não deve ser vazio'
+  74 | 	}
+  75 |
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (72:7)
+
+  70 | 
+  71 | 	validacaoCS() {
+> 72 | 		if ()
+     | 		    ^
+  73 | 		'Não deve ser vazio'
+  74 | 	}
+  75 |
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (72:7)
+
+  70 | 
+  71 | 	validacaoCS() {
+> 72 | 		if ()
+     | 		    ^
+  73 | 		'Não deve ser vazio'
+  74 | 	}
+  75 |
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (72:7)
+
+  70 | 
+  71 | 	validacaoCS() {
+> 72 | 		if ()
+     | 		    ^
+  73 | 		'Não deve ser vazio'
+  74 | 	}
+  75 |
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (72:7)
+
+  70 | 
+  71 | 	validacaoCS() {
+> 72 | 		if ()
+     | 		    ^
+  73 | 		'Não deve ser vazio'
+  74 | 	}
+  75 |
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (72:7)
+
+  70 | 
+  71 | 	validacaoCS() {
+> 72 | 		if ()
+     | 		    ^
+  73 | 		'Não deve ser vazio'
+  74 | 	}
+  75 |
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (72:7)
+
+  70 | 
+  71 | 	validacaoCS() {
+> 72 | 		if ()
+     | 		    ^
+  73 | 		'Não deve ser vazio'
+  74 | 	}
+  75 |
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (73:7)
+
+  71 | 
+  72 | 	validacaoCS() {
+> 73 | 		if ()
+     | 		    ^
+  74 | 		'Não deve ser vazio'
+  75 | 	}
+  76 |
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (73:7)
+
+  71 | 
+  72 | 	validacaoCS() {
+> 73 | 		if ()
+     | 		    ^
+  74 | 		'Não deve ser vazio'
+  75 | 	}
+  76 |
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:  'validacaoCS' is not defined                                           no-undef
+  Line 75:3:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:  'validacaoCS' is not defined                                           no-undef
+  Line 74:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 77:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:  'validacaoCS' is not defined                                           no-undef
+  Line 74:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 77:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:  'validacaoCS' is not defined                                           no-undef
+  Line 75:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 78:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 65:3:  'validacaoCS' is not defined                                           no-undef
+  Line 76:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 79:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:  'validacaoCS' is not defined                                           no-undef
+  Line 75:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 78:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:  'validacaoCS' is not defined                                           no-undef
+  Line 75:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 78:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:  'validacaoCS' is not defined                                           no-undef
+  Line 75:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 78:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:  'validacaoCS' is not defined                                           no-undef
+  Line 75:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 78:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:  'validacaoCS' is not defined                                           no-undef
+  Line 75:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 78:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:  'validacaoCS' is not defined                                           no-undef
+  Line 75:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 78:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:    'validacaoCS' is not defined                                           no-undef
+  Line 75:4:    Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 78:4:    Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 133:22:  'mensagem' is not defined                                              no-undef
+  Line 134:77:  'mensagem' is not defined                                              no-undef
+  Line 135:16:  'mensagem' is not defined                                              no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:    'validacaoCS' is not defined                                           no-undef
+  Line 75:4:    Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 78:4:    Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 133:22:  'mensagem' is not defined                                              no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:  'validacaoCS' is not defined                                           no-undef
+  Line 75:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 78:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:  'validacaoCS' is not defined                                           no-undef
+  Line 75:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 78:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:  'validacaoCS' is not defined                                           no-undef
+  Line 75:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 78:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 64:3:  'validacaoCS' is not defined                                           no-undef
+  Line 75:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 78:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 66:3:  'validacaoCS' is not defined                                           no-undef
+  Line 77:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 80:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 66:3:  'validacaoCS' is not defined                                           no-undef
+  Line 77:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 80:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 66:3:  'validacaoCS' is not defined                                           no-undef
+  Line 78:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 81:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 66:3:  'validacaoCS' is not defined                                           no-undef
+  Line 79:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+  Line 82:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 66:3:  'validacaoCS' is not defined                                           no-undef
+  Line 81:4:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 66:3:  'validacaoCS' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 66:3:  'validacaoCS' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 66:3:  'validacaoCS' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (78:26)
+
+  76 | 		let dica_conteudo = this.state.dica_conteudo;
+  77 | 		if (!this.state.titulo) {
+> 78 | 			dica_titulo.push({id: , texto: 'Não deve ser vazio');
+     | 			                      ^
+  79 | 		}
+  80 | 		if (!this.state.conteudo) {
+  81 | 			dica_conteudo.push('Não deve ser vazio');
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+  Line 121:22:  'mensagem' is not defined  no-undef
+  Line 138:22:  'mensagem' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled with warnings.
+
+src/Mensagens.js
+  Line 85:4:  Duplicate key 'dica_titulo'  no-dupe-keys
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (59:7)
+
+  57 | }
+  58 | 
+> 59 | const MensagensDataSource = new MensagensDataSourceClass();
+     |       ^
+  60 | 
+  61 | export class InclusaoMensagem extends React.Component {
+  62 | 	constructor(props) {
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (59:7)
+
+  57 | }
+  58 | 
+> 59 | const MensagensDataSource = new MensagensDataSourceClass();
+     |       ^
+  60 | 
+  61 | export class InclusaoMensagem extends React.Component {
+  62 | 	constructor(props) {
+Compiling...
+Failed to compile.
+
+src/Mensagens.js
+Syntax error: Unexpected token (62:7)
+
+  60 | }
+  61 | 
+> 62 | const MensagensDataSource = new MensagensDataSourceClass();
+     |       ^
+  63 | 
+  64 | export class InclusaoMensagem extends React.Component {
+  65 | 	constructor(props) {
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Failed to compile.
+
+./src/Mensagens.js
+Error: ENOENT: no such file or directory, open '/var/pastas/testeSocial/my-app/src/Mensagens.js'
+Compiling...
+Failed to compile.
+
+./src/Mensagens.js
+Error: ENOENT: no such file or directory, open '/var/pastas/testeSocial/my-app/src/Mensagens.js'
+Compiling...
+Failed to compile.
+
+./src/App.js
+Module not found: Can't resolve './Mensagens/ConteudoMensagem' in '/var/pastas/testeSocial/my-app/src'
+Compiling...
+Failed to compile.
+
+./src/Mensagem/componentes/Mensagens.js
+Module not found: Can't resolve './Datasource' in '/var/pastas/testeSocial/my-app/src/Mensagem/componentes'
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/InclusaoMensagem.js
+Syntax error: Identifier 'MensagensDataSource' has already been declared (8:7)
+
+   6 | import Mensagem from './Model';
+   7 | 
+>  8 | const MensagensDataSource = new MensagensDataSourceClass();
+     |       ^
+   9 | 
+  10 | export class InclusaoMensagem extends React.Component {
+  11 | 	constructor(props) {
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/InclusaoMensagem.js
+Syntax error: Identifier 'MensagensDataSource' has already been declared (8:7)
+
+   6 | import Mensagem from './Model';
+   7 | 
+>  8 | const MensagensDataSource = new MensagensDataSourceClass();
+     |       ^
+   9 | 
+  10 | export class InclusaoMensagem extends React.Component {
+  11 | 	constructor(props) {
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/InclusaoMensagem.js
+Syntax error: Identifier 'MensagensDataSource' has already been declared (8:7)
+
+   6 | import Mensagem from './Model';
+   7 | 
+>  8 | const MensagensDataSource = new MensagensDataSourceClass();
+     |       ^
+   9 | 
+  10 | export class InclusaoMensagem extends React.Component {
+  11 | 	constructor(props) {
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/InclusaoMensagem.js
+Syntax error: Identifier 'MensagensDataSource' has already been declared (8:7)
+
+   6 | import Mensagem from './Model';
+   7 | 
+>  8 | const MensagensDataSource = new MensagensDataSourceClass();
+     |       ^
+   9 | 
+  10 | export class InclusaoMensagem extends React.Component {
+  11 | 	constructor(props) {
+Compiling...
+Failed to compile.
+
+src/Mensagem/Datasource.js
+Syntax error: Unexpected token, expected "{" (49:8)
+
+  47 | const MensagensDataSource = new MensagensDataSourceClass();
+  48 | 
+> 49 | export MensagensDataSource;
+     |        ^
+
+src/Mensagem/componentes/InclusaoMensagem.js
+Syntax error: Identifier 'MensagensDataSource' has already been declared (8:7)
+
+   6 | import Mensagem from './Model';
+   7 | 
+>  8 | const MensagensDataSource = new MensagensDataSourceClass();
+     |       ^
+   9 | 
+  10 | export class InclusaoMensagem extends React.Component {
+  11 | 	constructor(props) {
+Compiling...
+Failed to compile.
+
+src/Mensagem/Datasource.js
+Syntax error: Unexpected token, expected "{" (49:8)
+
+  47 | const MensagensDataSource = new MensagensDataSourceClass();
+  48 | 
+> 49 | export MensagensDataSource;
+     |        ^
+
+src/Mensagem/componentes/InclusaoMensagem.js
+Syntax error: Identifier 'MensagensDataSource' has already been declared (8:7)
+
+   6 | import Mensagem from './Model';
+   7 | 
+>  8 | const MensagensDataSource = new MensagensDataSourceClass();
+     |       ^
+   9 | 
+  10 | export class InclusaoMensagem extends React.Component {
+  11 | 	constructor(props) {
+Compiling...
+Failed to compile.
+
+src/Mensagem/Datasource.js
+Syntax error: Unexpected token, expected "{" (49:8)
+
+  47 | const MensagensDataSource = new MensagensDataSourceClass();
+  48 | 
+> 49 | export MensagensDataSource;
+     |        ^
+
+src/Mensagem/componentes/InclusaoMensagem.js
+Syntax error: Identifier 'MensagensDataSource' has already been declared (8:7)
+
+   6 | import Mensagem from './Model';
+   7 | 
+>  8 | const MensagensDataSource = new MensagensDataSourceClass();
+     |       ^
+   9 | 
+  10 | export class InclusaoMensagem extends React.Component {
+  11 | 	constructor(props) {
+Compiling...
+Failed to compile.
+
+src/Mensagem/Datasource.js
+Syntax error: Unexpected token, expected "{" (49:8)
+
+  47 | const MensagensDataSource = new MensagensDataSourceClass();
+  48 | 
+> 49 | export MensagensDataSource;
+     |        ^
+
+src/Mensagem/componentes/InclusaoMensagem.js
+Syntax error: Identifier 'MensagensDataSource' has already been declared (8:7)
+
+   6 | import Mensagem from './Model';
+   7 | 
+>  8 | const MensagensDataSource = new MensagensDataSourceClass();
+     |       ^
+   9 | 
+  10 | export class InclusaoMensagem extends React.Component {
+  11 | 	constructor(props) {
+Compiling...
+Failed to compile.
+
+src/Mensagem/Datasource.js
+Syntax error: Unexpected token, expected "{" (49:8)
+
+  47 | const MensagensDataSource = new MensagensDataSourceClass();
+  48 | 
+> 49 | export MensagensDataSource;
+     |        ^
+
+src/Mensagem/componentes/InclusaoMensagem.js
+Syntax error: Identifier 'MensagensDataSource' has already been declared (8:7)
+
+   6 | import Mensagem from './Model';
+   7 | 
+>  8 | const MensagensDataSource = new MensagensDataSourceClass();
+     |       ^
+   9 | 
+  10 | export class InclusaoMensagem extends React.Component {
+  11 | 	constructor(props) {
+Compiling...
+Failed to compile.
+
+src/Mensagem/Datasource.js
+Syntax error: Unexpected token, expected "{" (49:8)
+
+  47 | const MensagensDataSource = new MensagensDataSourceClass();
+  48 | 
+> 49 | export MensagensDataSource;
+     |        ^
+Compiling...
+Failed to compile.
+
+src/Mensagem/Datasource.js
+Syntax error: Unexpected token, expected "{" (49:8)
+
+  47 | const MensagensDataSource = new MensagensDataSourceClass();
+  48 | 
+> 49 | export MensagensDataSource;
+     |        ^
+Compiling...
+Failed to compile.
+
+src/Mensagem/Datasource.js
+Syntax error: Unexpected token, expected "{" (49:8)
+
+  47 | const MensagensDataSource = new MensagensDataSourceClass();
+  48 | 
+> 49 | export MensagensDataSource;
+     |        ^
+Compiling...
+Failed to compile.
+
+src/Mensagem/Datasource.js
+Syntax error: Unexpected token, expected "{" (49:8)
+
+  47 | const MensagensDataSource = new MensagensDataSourceClass();
+  48 | 
+> 49 | export MensagensDataSource;
+     |        ^
+Compiling...
+Failed to compile.
+
+./src/App.js
+Attempted import error: './Mensagem/componentes/ConteudoMensagem' does not contain a default export (imported as 'ConteudoMensagem').
+Compiling...
+Failed to compile.
+
+./src/Mensagem/componentes/ConteudoMensagem.js
+Attempted import error: './Mensagens' does not contain a default export (imported as 'ContextoMensagemSelecionada').
+Compiling...
+Failed to compile.
+
+./src/App.js
+Attempted import error: './Mensagem/componentes/InclusaoMensagem' does not contain a default export (imported as 'InclusaoMensagem').
+Compiling...
+Failed to compile.
+
+./src/Mensagem/componentes/InclusaoMensagem.js
+Attempted import error: '../Model' does not contain a default export (imported as 'Mensagem').
+Compiling...
+Failed to compile.
+
+./src/Mensagem/componentes/Mensagens.js
+Attempted import error: '../Datasource' does not contain a default export (imported as 'MensagensDataSource').
+Compiling...
+Failed to compile.
+
+src/Mensagem/Datasource.js
+  Line 35:9:   'Mensagem' is not defined  no-undef
+  Line 38:13:  'Mensagem' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/Datasource.js
+  Line 51:1:  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 42:8:   'Pagination' is not defined  react/jsx-no-undef
+  Line 43:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 44:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 45:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 46:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 48:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 49:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 50:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 51:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 52:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 54:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 55:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 56:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 57:10:  'Pagination' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 42:2:  'Pagination' is not defined  react/jsx-no-undef
+  Line 43:3:  'Pagination' is not defined  react/jsx-no-undef
+  Line 44:3:  'Pagination' is not defined  react/jsx-no-undef
+  Line 45:3:  'Pagination' is not defined  react/jsx-no-undef
+  Line 46:3:  'Pagination' is not defined  react/jsx-no-undef
+  Line 48:3:  'Pagination' is not defined  react/jsx-no-undef
+  Line 49:3:  'Pagination' is not defined  react/jsx-no-undef
+  Line 50:3:  'Pagination' is not defined  react/jsx-no-undef
+  Line 51:3:  'Pagination' is not defined  react/jsx-no-undef
+  Line 52:3:  'Pagination' is not defined  react/jsx-no-undef
+  Line 54:3:  'Pagination' is not defined  react/jsx-no-undef
+  Line 55:3:  'Pagination' is not defined  react/jsx-no-undef
+  Line 56:3:  'Pagination' is not defined  react/jsx-no-undef
+  Line 57:3:  'Pagination' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 41:8:  'Pagination' is not defined  react/jsx-no-undef
+  Line 42:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 43:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 44:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 45:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 47:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 48:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 49:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 50:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 51:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 53:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 54:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 55:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 56:9:  'Pagination' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+Syntax error: Expected corresponding JSX closing tag for <Accordion.Toggle> (76:5)
+
+  74 | 						</Card.Body>
+  75 | 					</Accordion.Collapse>
+> 76 | 				</Card>
+     | 				^
+  77 | 			</Accordion>
+  78 | 		);
+  79 | 	}
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 42:8:  'Pagination' is not defined  react/jsx-no-undef
+  Line 43:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 44:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 45:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 46:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 48:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 49:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 50:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 51:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 52:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 54:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 55:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 56:9:  'Pagination' is not defined  react/jsx-no-undef
+  Line 57:9:  'Pagination' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+Syntax error: Expected corresponding JSX closing tag for <Card.Header> (76:5)
+
+  74 | 						</Card.Body>
+  75 | 					</Accordion.Collapse>
+> 76 | 				</Card>
+     | 				^
+  77 | 			</Accordion>
+  78 | 		);
+  79 | 	}
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+Syntax error: Expected corresponding JSX closing tag for <Card.Header> (76:5)
+
+  74 | 						</Card.Body>
+  75 | 					</Accordion.Collapse>
+> 76 | 				</Card>
+     | 				^
+  77 | 			</Accordion>
+  78 | 		);
+  79 | 	}
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+Syntax error: Expected corresponding JSX closing tag for <Card.Header> (76:5)
+
+  74 | 						</Card.Body>
+  75 | 					</Accordion.Collapse>
+> 76 | 				</Card>
+     | 				^
+  77 | 			</Accordion>
+  78 | 		);
+  79 | 	}
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 44:9:   'Pagination' is not defined  react/jsx-no-undef
+  Line 45:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 46:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 47:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 48:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 50:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 51:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 52:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 53:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 54:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 56:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 57:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 58:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 59:10:  'Pagination' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 45:9:   'Pagination' is not defined  react/jsx-no-undef
+  Line 46:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 47:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 48:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 49:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 51:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 52:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 53:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 54:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 55:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 57:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 58:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 59:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 60:10:  'Pagination' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 43:8:   'Form' is not defined        react/jsx-no-undef
+  Line 48:9:   'Pagination' is not defined  react/jsx-no-undef
+  Line 49:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 50:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 51:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 52:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 54:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 55:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 56:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 57:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 58:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 60:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 61:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 62:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 63:10:  'Pagination' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 48:9:   'Pagination' is not defined  react/jsx-no-undef
+  Line 49:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 50:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 51:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 52:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 54:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 55:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 56:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 57:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 58:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 60:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 61:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 62:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 63:10:  'Pagination' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 48:9:   'Pagination' is not defined  react/jsx-no-undef
+  Line 49:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 50:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 51:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 52:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 54:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 55:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 56:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 57:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 58:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 60:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 61:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 62:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 63:10:  'Pagination' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 44:9:   'Pagination' is not defined  react/jsx-no-undef
+  Line 45:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 46:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 47:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 48:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 50:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 51:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 52:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 53:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 54:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 56:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 57:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 58:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 59:10:  'Pagination' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 44:9:   'Pagination' is not defined  react/jsx-no-undef
+  Line 45:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 46:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 47:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 48:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 50:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 51:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 52:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 53:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 54:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 56:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 57:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 58:10:  'Pagination' is not defined  react/jsx-no-undef
+  Line 59:10:  'Pagination' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+src/Mensagem/componentes/Mensagens.js
+  Line 5:8:  'Mensagem' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+

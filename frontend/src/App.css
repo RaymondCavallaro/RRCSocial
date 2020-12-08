@@ -1,0 +1,15 @@
+.my-forkme_banner {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 100px;
+    z-index: 10;
+    padding: 10px 10px 10px 10px;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+.my-blockquote {
+    font-size: 80%;
+    color: #6c757d;
+}
