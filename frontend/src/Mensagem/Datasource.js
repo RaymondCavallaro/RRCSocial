@@ -1,16 +1,24 @@
+import { EventoRequisicao } from './Model';
 import Mensagem from './Model';
+import { v4 as uuid_v4 } from 'uuid';
 
 //import { api } from '../config.json';
 
 //const QUERY = api + '';
 
 class MensagensDataSourceClass {
-	
-	incluir() {
-		
+
+	incluir(mensagem) {
+		let eventoRequisicao = new EventoRequisicao({tipo: 'incluir', mensagem: mensagem});
+		console.log(eventoRequisicao);
 	}
 	
-	addChangeListener() {
+	like(mensagem) {
+		let eventoRequisicao = new EventoRequisicao({tipo: 'like', mensagem: mensagem});
+		console.log(eventoRequisicao);
+	}
+	
+	addChangeListener(listener) {
 		
 	}
 

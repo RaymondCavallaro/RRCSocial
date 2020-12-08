@@ -12,7 +12,7 @@ export default function CardExpansivel(props) {
 							{props.titulo}
 						</div>
 						<div className="float-right clearfix">
-							<span className="my-blockquote">expansivel</span>
+							<span className="my-blockquote align-middle">expansivel</span>
 						</div>
 					</Accordion.Toggle>
 					{extensao}

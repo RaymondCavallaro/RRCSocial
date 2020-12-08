@@ -38,6 +38,9 @@ export class ListaMensagens extends React.Component {
 									<Button variant="link" onClick={(e) => mudaMensagemSelecionada(mensagem)}>
 										{mensagem.titulo}
 									</Button>
+									{mensagem.likes}
+									<Button variant="link" size="sm" className="far fa-thumbs-up"
+											onClick={(e) => MensagensDataSource.like(mensagem)} />
 								</li>
 							)}
 						</ul>

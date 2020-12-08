@@ -9,36 +9,39 @@ import Mensagem from '../Model';
 export default class InclusaoMensagem extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
+		let state = {
 			titulo: '',
-			dica_titulo: [],
-			conteudo: '',
-			dica_conteudo: []
+			conteudo: ''
 		};
-		this.validacaoCS();
+		Object.assign(state, this.validacaoCS(state));
+		this.state = state;
 	}
 	
 	incluir() {
-		console.log(this.state.dica_titulo, this.state.dica_conteudo);
-		this.validacaoCS();
-		console.log(this.state.dica_titulo, this.state.dica_conteudo);
-		MensagensDataSource.incluir(new Mensagem(this.state));
+		let validacao = this.validacaoCS(this.state);
+		this.setState(validacao);
+		if (!(validacao.dica_titulo.length || validacao.dica_conteudo.length)) {
+			MensagensDataSource.incluir(new Mensagem({
+				titulo: this.state.titulo,
+				conteudo: this.state.conteudo,
+			}));
+		}
 	}
 
-	validacaoCS() {
+	validacaoCS(state) {
 		let dica_titulo = [];
 		let dica_conteudo = [];
 
-		if (!this.state.titulo) {
+		if (!state.titulo) {
 			dica_titulo.push({id: uuid_v4(), texto: 'Não deve ser vazio'});
 		}
-		if (!this.state.conteudo) {
+		if (!state.conteudo) {
 			dica_conteudo.push({id: uuid_v4(), texto: 'Não deve ser vazio'});
 		}
-		this.setState({
+		return {
 			dica_titulo: dica_titulo,
 			dica_conteudo: dica_conteudo
-		});
+		};
 	}
 	
 	render() {
