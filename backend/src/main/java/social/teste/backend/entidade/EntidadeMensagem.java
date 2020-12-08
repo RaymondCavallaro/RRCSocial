@@ -14,8 +14,10 @@ public class EntidadeMensagem implements InterfaceEntidade {
 
 	@JsonProperty("id")
 	private String id;
-	@JsonProperty("texto")
-	private String texto;
+	@JsonProperty("titulo")
+	private String titulo;
+	@JsonProperty("conteudo")
+	private String conteudo;
 	@JsonProperty("likes")
 	private Integer likes;
 
