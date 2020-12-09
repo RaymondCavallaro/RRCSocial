@@ -19,13 +19,27 @@ export default class InclusaoMensagem extends React.Component {
 	
 	incluir() {
 		let validacao = this.validacaoCS(this.state);
-		this.setState(validacao);
 		if (!(validacao.dica_titulo.length || validacao.dica_conteudo.length)) {
-			MensagensDataSource.incluir(new Mensagem({
+			let resposta = MensagensDataSource.incluir(new Mensagem({
 				titulo: this.state.titulo,
 				conteudo: this.state.conteudo,
 			}));
+			resposta && resposta.mensagens.length && (validacao = this.validacaoSS(resposta.mensagens));
 		}
+		this.setState(validacao);
+	}
+
+	validacaoSS(mensagens) {
+		let dica_titulo = [];
+		let dica_conteudo = [];
+		mensagens.forEach(msg => {
+			msg.campo === 'titulo' && dica_titulo.push(msg.texto);
+			msg.campo === 'conteudo' && dica_conteudo.push(msg.texto);
+		});
+		return {
+			dica_titulo: dica_titulo,
+			dica_conteudo: dica_conteudo
+		};
 	}
 
 	validacaoCS(state) {
@@ -43,26 +57,42 @@ export default class InclusaoMensagem extends React.Component {
 			dica_conteudo: dica_conteudo
 		};
 	}
-	
+
+	limpar() {
+		let state = {
+			titulo: '',
+			conteudo: ''
+		};
+		Object.assign(state, this.validacaoCS(state));
+		this.setState(state);
+	}
+
 	render() {
 		return (
 			<CardExpansivel titulo="Incluir Mensagem"
 					extensao={(
-						<Form className="d-inline-block float-right clearfix col-auto" onSubmit={(e) => { this.incluir(); e.preventDefault() }}>
-							<Button type="submit">
-								<i className="fas fa-plus"></i> Incluir
+						<div className="d-inline-block float-right clearfix col-auto">
+							<Button className="d-inline-block mr-1" onClick={() => this.limpar()}>
+								<i className="fas fa-trash"></i> Limpar
 							</Button>
-						</Form>
+							<Form noValidate className="d-inline-block" onSubmit={(e) => { this.incluir(); e.preventDefault() }}>
+								<Button type="submit">
+									<i className="fas fa-plus"></i> Incluir
+								</Button>
+							</Form>
+						</div>
 					)} corpo={(
 						<div>
 							<Form.Group controlId="inclusao.titulo">
 								<Form.Label>Título</Form.Label>
 								<Form.Control type="text"
 										value={this.state.titulo}
+										isInvalid={!!this.state.dica_titulo.length}
+										feedback={this.state.dica_titulo}
 										onChange={(e) => this.setState({
 											titulo: e.target.value
 										})}  />
-								<div>
+								<Form.Control.Feedback type="invalid">
 									<ul>
 										{this.state.dica_titulo.map((dica) =>
 											<li key={dica.id}>
@@ -70,16 +100,18 @@ export default class InclusaoMensagem extends React.Component {
 											</li>
 										)}
 									</ul>
-								</div>
+								</Form.Control.Feedback>
 							</Form.Group>
 							<Form.Group controlId="inclusao.conteudo">
 								<Form.Label>Conteúdo</Form.Label>
 								<Form.Control as="textarea" rows={3}
 										value={this.state.conteudo}
+										isInvalid={this.state.dica_conteudo.length}
+										feedback={this.state.dica_conteudo}
 										onChange={(e) => this.setState({
 											conteudo: e.target.value
 										})}  />
-								<div>
+								<Form.Control.Feedback type="invalid">
 									<ul>
 										{this.state.dica_conteudo.map((dica) =>
 											<li key={dica.id}>
@@ -87,7 +119,7 @@ export default class InclusaoMensagem extends React.Component {
 											</li>
 										)}
 									</ul>
-								</div>
+								</Form.Control.Feedback>
 							</Form.Group>							
 						</div>
 					)} />

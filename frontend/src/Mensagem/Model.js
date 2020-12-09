@@ -3,7 +3,11 @@ import { v4 as uuid_v4 } from 'uuid';
 const Mensagem_defaultAttrs = {
 	titulo: '',
 	conteudo: '',
-	likes: 0
+	upvotes: 0,
+	hash: uuid_v4(),
+	hash_anterior: '',
+	voto: false,
+	filaEventosNaoAtualizados: []
 }
 
 export default class Mensagem {
@@ -12,9 +16,19 @@ export default class Mensagem {
 	}
 }
 
+const Tarefa_status = {
+	PENDENTE: 'pendente',
+	CANCELADA: 'cancelada',
+	ENVIADA: 'enviada',
+	RECUSADA: 'recusada',
+	FINALIZADA: 'finalizada',
+	EXCLUIDA: 'excluida'
+}
+
+export { Tarefa_status };
+
 const EventoRequisicao_defaultAttrs = {
-	tipo: '',
-	mensagem: new Mensagem()
+	tipo: ''
 }
 
 export class EventoRequisicao {

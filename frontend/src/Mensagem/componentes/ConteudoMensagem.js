@@ -1,34 +1,51 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
+import ToggleButton from 'react-bootstrap/ToggleButton';
 
 import CardExpansivel from '../../componentes/CardExpansivel';
 import MensagensDataSource from '../Datasource';
-import { ContextoMensagemSelecionada } from './Mensagens';
+import { ContextoMensagemSelecionada, GerenciadorMensagens } from './Mensagens';
+import Mensagem from '../Model';
 
-export default function ConteudoMensagem(props) {
-	return (
-		<ContextoMensagemSelecionada.Consumer>
-			{ (selecionada) => {
-				let extensao, corpo;
-				if (!selecionada) {
-					extensao = corpo = null;
-				} else {
-					extensao = (
-						<div className="align-middle">
-							{selecionada.likes}
-							<Button variant="link" size="sm" className="far fa-thumbs-up"
-									onClick={(e) => MensagensDataSource.like(selecionada)} />
-						</div>
-					);
-					corpo = (
-						<div className={selecionada.id}>
-							<h3>{selecionada.titulo}</h3>
-							<p>{selecionada.conteudo}</p>
-						</div>
-					);
-				}
-				return <CardExpansivel titulo="Mensagem Selecionada" extensao={extensao} corpo={corpo} />;
-			} }
-		</ContextoMensagemSelecionada.Consumer>
-	);
+export default class ConteudoMensagem extends React.Component {
+	vota(selecionada) {
+		if (!selecionada.voto) {
+			if (selecionada.upvoted) {
+				MensagensDataSource.removevote(selecionada);
+			} else {
+				MensagensDataSource.upvote(selecionada);
+			}
+		}
+		GerenciadorMensagens.atualizaMensagem();
+	}
+	
+	render() {
+		return (
+			<ContextoMensagemSelecionada.Consumer>
+				{ (selecionada) => {
+					let extensao, corpo;
+					if (!selecionada) {
+						extensao = corpo = null;
+					} else {
+						extensao = (
+							<div className="align-middle">
+								<ToggleButton type="checkbox" size="sm"
+										disabled={selecionada.voto}
+										checked={selecionada.upvoted}
+										className="fas fa-thumbs-up"
+										onClick={() => this.vota(selecionada)} />
+								{selecionada.upvotes}
+							</div>
+						);
+						corpo = (
+							<div className={selecionada.id}>
+								<h3>{selecionada.titulo}</h3>
+								<p>{selecionada.conteudo}</p>
+							</div>
+						);
+					}
+					return <CardExpansivel titulo="Mensagem Selecionada" extensao={extensao} corpo={corpo} />;
+				} }
+			</ContextoMensagemSelecionada.Consumer>
+		);
+	}
 }

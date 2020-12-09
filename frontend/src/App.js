@@ -1,8 +1,10 @@
 import React from 'react';
 import { Navbar, Container, Row, Col } from 'react-bootstrap';
 import { Mensagens, ListaMensagens } from './Mensagem/componentes/Mensagens';
+import { ContextoGerenciadorTarefasProvider } from './Mensagem/GerenciadorTarefas';
 import InclusaoMensagem from './Mensagem/componentes/InclusaoMensagem';
 import ConteudoMensagem from './Mensagem/componentes/ConteudoMensagem';
+import Tarefas from './Mensagem/componentes/Tarefas';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -19,17 +21,32 @@ class App extends React.Component {
 						View on GitHub <i className="ml-2 fab fa-lg fa-github"></i>
 					</a>
 				</Navbar>
-				<Mensagens>
-					<Container fluid>
-					  <Row>
-					    <Col>
-							<InclusaoMensagem />
-							<ListaMensagens />
-							<ConteudoMensagem />
-					    </Col>
-					  </Row>
-					</Container>
-				</Mensagens>
+				<Container fluid>
+					<ContextoGerenciadorTarefasProvider>
+						<Mensagens>
+							<Row>
+								<Col>
+									<InclusaoMensagem />
+								</Col>
+							</Row>
+							<Row>
+								<Col>
+									<ListaMensagens />
+								</Col>
+							</Row>
+							<Row>
+								<Col>
+									<ConteudoMensagem />
+								</Col>
+							</Row>
+						</Mensagens>
+						<Row>
+							<Col>
+								<Tarefas />
+							</Col>
+						</Row>
+					</ContextoGerenciadorTarefasProvider>
+				</Container>
 			</div>
 		);
 	}

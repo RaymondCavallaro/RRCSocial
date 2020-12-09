@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Accordion } from 'react-bootstrap';
+import { right } from './Utils';
 
 export default function CardExpansivel(props) {
 	const extensao = props.extensao || null;
@@ -11,9 +12,9 @@ export default function CardExpansivel(props) {
 						<div className="d-inline-block align-middle">
 							{props.titulo}
 						</div>
-						<div className="float-right clearfix">
+						{right(
 							<span className="my-blockquote align-middle">expansivel</span>
-						</div>
+						)}
 					</Accordion.Toggle>
 					{extensao}
 				</Card.Header>

@@ -1,32 +1,65 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
+import { ToggleButton, Button } from 'react-bootstrap';
 
 import CardExpansivel from '../../componentes/CardExpansivel';
 import MensagensDataSource from '../Datasource';
+import Mensagem from '../Model';
 
 let ContextoMensagemSelecionada = React.createContext( null );
-let mudaMensagemSelecionada;
+let GerenciadorMensagens = {};
 
 export class ListaMensagens extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			change: {},
 			mensagens: MensagensDataSource.getMensagens()
 		};
 	}
 
 	componentDidMount() {
-//		MensagensDataSource.addChangeListener(this.handleChange);
+		MensagensDataSource.addChangeListener(this.handleChange);
 	}
 
 	componentWillUnmount() {
-//		MensagensDataSource.removeChangeListener(this.handleChange);
+		MensagensDataSource.removeChangeListener(this.handleChange);
 	}
 
-	handleChange() {
+	handleChange(evt) {
+		let mensagens = this.state.mensagens;
+		this.atualizaMensagens(mensagens, evt);
 		this.setState({
-			mensagens: MensagensDataSource.getMensagens()
+			change: {},
+			mensagens: mensagens
 		});
+	}
+
+	atualizaMensagens(mensagens, evt) {
+		let mensagemReferida = mensagens.find(msg => msg.id === evt.mensagem.id);
+		if (mensagemReferida.hash !== evt.mensagem.hash) {
+			if (mensagemReferida.hash !== evt.mensagem.hash_anterior) {
+				let idx = mensagens.findIndex(mensagemReferida);
+				mensagens = mensagens.filter(msg => msg.id !== evt.mensagem.id);
+				mensagens.push(idx, evt.mensagem);
+				mensagemReferida.filaEventosNaoAtualizados.forEach( eventoNaoAtualizado => {
+					mensagens = this.atualizaMensagens(mensagens, eventoNaoAtualizado)
+				} );
+				return mensagens;
+			} else {
+				mensagemReferida.filaEventosNaoAtualizados.push(evt);
+			}
+		}
+	}
+
+	vota(mensagem) {
+		if (!mensagem.voto) {
+			if (mensagem.upvoted) {
+				MensagensDataSource.removevote(mensagem);
+			} else {
+				MensagensDataSource.upvote(mensagem);
+			}
+			GerenciadorMensagens.atualizaMensagem();
+		}
 	}
 
 	render() {
@@ -35,12 +68,19 @@ export class ListaMensagens extends React.Component {
 						<ul>
 							{this.state.mensagens.results.map((mensagem) =>
 								<li key={mensagem.id}>
-									<Button variant="link" onClick={(e) => mudaMensagemSelecionada(mensagem)}>
+									<Button variant="link" onClick={(e) => GerenciadorMensagens.mudaMensagemSelecionada(mensagem)}>
 										{mensagem.titulo}
 									</Button>
-									{mensagem.likes}
-									<Button variant="link" size="sm" className="far fa-thumbs-up"
-											onClick={(e) => MensagensDataSource.like(mensagem)} />
+									<ContextoMensagemSelecionada.Consumer>
+										{ (selecionada) => 
+											<ToggleButton type="checkbox" size="sm"
+													disabled={mensagem.voto}
+													checked={mensagem.upvoted}
+													className="fas fa-thumbs-up"
+													onClick={() => this.vota(mensagem)} />
+										}
+									</ContextoMensagemSelecionada.Consumer>
+									{mensagem.upvotes}
 								</li>
 							)}
 						</ul>
@@ -54,8 +94,15 @@ export class Mensagens extends React.Component {
 		super(props);
 
 		this.state = {
-			selecionada: null,
+			selecionada: null
 		};
+	}
+
+	atualizaMensagem() {
+		let selecionada = this.state.selecionada;
+		this.setState({
+			selecionada: new Mensagem(selecionada)
+		});
 	}
 
 	selecionaMensagem(mensagem) {
@@ -65,7 +112,8 @@ export class Mensagens extends React.Component {
 	}
 
 	componentDidMount() {
-		mudaMensagemSelecionada = (mensagem) => this.selecionaMensagem(mensagem);
+		GerenciadorMensagens.mudaMensagemSelecionada = (mensagem) => this.selecionaMensagem(mensagem);
+		GerenciadorMensagens.atualizaMensagem = () => this.atualizaMensagem();
 	}
 
 	render() {
@@ -77,4 +125,4 @@ export class Mensagens extends React.Component {
 	}
 }
 
-export { ContextoMensagemSelecionada };
+export { ContextoMensagemSelecionada, GerenciadorMensagens };

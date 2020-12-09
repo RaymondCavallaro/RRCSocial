@@ -1,0 +1,44 @@
+version: "3"
+services:
+  postgres:
+    image: postgres
+    restart: always
+    volumes:
+      - "db-data:/var/lib/postgressql/data"
+    networks:
+      - topnet
+    environment:
+#      POSTGRES_PASSWORD: secret
+#      POSTGRES_USER: postgres
+  backend:
+    image: redmine
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - "backend-data:/var/backend"
+    networks:
+      - topnet
+    depends_on:
+      - postgres
+  frontend:
+    image: sonatype/nexus:oss
+    ports:
+      - 9300:8081
+    volumes:
+      - "frontend-data:/var/frontend"
+    networks:
+      - topnet
+networks:
+  topnet:
+volumes:
+  db-data:
+  redmine-data:
+  nexus-data:
+  jenkins-data:
+  portainer-data:
+  ssh-data:
+  owncloud-data:
+  zookeeper-data:
+  zookeeper-datalog:
+  zookeeper-conf:

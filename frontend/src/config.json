@@ -1,3 +1,6 @@
 {
-	"api": ""
+	"mensagem": {
+		"rest-api": "",
+		"socket": ""
+	}
 }
