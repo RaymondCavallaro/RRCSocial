@@ -11,10 +11,10 @@ services:
 #      POSTGRES_PASSWORD: secret
 #      POSTGRES_USER: postgres
   backend:
-    image: redmine
+    image: tomcat
     restart: always
     ports:
-      - 3000:3000
+      - 8080:8080
     volumes:
       - "backend-data:/var/backend"
     networks:
@@ -22,9 +22,9 @@ services:
     depends_on:
       - postgres
   frontend:
-    image: sonatype/nexus:oss
+    image: node:12
     ports:
-      - 9300:8081
+      - 5000:5000
     volumes:
       - "frontend-data:/var/frontend"
     networks:
@@ -33,12 +33,5 @@ networks:
   topnet:
 volumes:
   db-data:
-  redmine-data:
-  nexus-data:
-  jenkins-data:
-  portainer-data:
-  ssh-data:
-  owncloud-data:
-  zookeeper-data:
-  zookeeper-datalog:
-  zookeeper-conf:
+  backend-data:./backend
+  frontend-data:./frontend
