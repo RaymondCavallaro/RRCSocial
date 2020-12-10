@@ -1,4 +1,4 @@
-package social.teste.backend.controller.configuracao;
+package social.teste.resource.server.controller.configuracao;
 
 public class MensagemNotFoundException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package social.teste.backend.comportamento;
+package social.teste.resource.server.comportamento;
 
 public interface InterfaceEntidade {
 

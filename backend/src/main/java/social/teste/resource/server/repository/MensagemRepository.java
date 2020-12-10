@@ -1,4 +1,4 @@
-package social.teste.backend.repository;
+package social.teste.resource.server.repository;
 
 import static org.springframework.data.domain.PageRequest.of;
 
@@ -9,7 +9,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.stereotype.Component;
 
-import social.teste.backend.entidade.EntidadeMensagem;
+import social.teste.resource.server.entidade.EntidadeMensagem;
 
 @Component
 public class MensagemRepository {

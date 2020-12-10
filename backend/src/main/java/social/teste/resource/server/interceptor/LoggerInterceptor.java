@@ -1,4 +1,4 @@
-package social.teste.backend.interceptor;
+package social.teste.resource.server.interceptor;
 
 import java.util.Enumeration;
 

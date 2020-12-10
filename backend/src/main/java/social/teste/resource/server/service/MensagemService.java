@@ -1,11 +1,11 @@
-package social.teste.backend.service;
+package social.teste.resource.server.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
-import social.teste.backend.entidade.EntidadeMensagem;
-import social.teste.backend.repository.MensagemRepository;
+import social.teste.resource.server.entidade.EntidadeMensagem;
+import social.teste.resource.server.repository.MensagemRepository;
 
 @Component
 public class MensagemService {

@@ -1,4 +1,4 @@
-package social.teste.backend.controller.configuracao;
+package social.teste.resource.server.controller.configuracao;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

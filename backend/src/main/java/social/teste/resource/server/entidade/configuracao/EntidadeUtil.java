@@ -1,4 +1,4 @@
-package social.teste.backend.entidade.configuracao;
+package social.teste.resource.server.entidade.configuracao;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,9 @@
-package social.teste.backend.controller.configuracao;
+package social.teste.resource.server.controller.configuracao;
 
+import static org.springframework.hateoas.CollectionModel.of;
+import static org.springframework.hateoas.EntityModel.of;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
-import static social.teste.backend.controller.configuracao.EntityWrapper.of;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,22 +11,33 @@ import java.util.stream.Collectors;
 
 import org.springframework.data.domain.Page;
 import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.hateoas.Link;
+import org.springframework.hateoas.LinkRelation;
+import org.springframework.hateoas.server.core.EmbeddedWrapper;
+import org.springframework.hateoas.server.core.EmbeddedWrappers;
 
-import social.teste.backend.controller.MensagemController;
-import social.teste.backend.entidade.EntidadeMensagem;
+import social.teste.resource.server.controller.MensagemController;
+import social.teste.resource.server.entidade.EntidadeMensagem;
 
 public class MensagemAssembler {
 
-	public static EntityWrapper<EntidadeMensagem> toResponse(EntidadeMensagem mensagem) {
+	private static EmbeddedWrappers wrappers = new EmbeddedWrappers(false);
+	private static LinkRelation listaMensagem = LinkRelation.of("mensagem");
+
+	public static EntityModel<EntidadeMensagem> toResponse(EntidadeMensagem mensagem) {
 		return of(mensagem, linkTo(methodOn(MensagemController.class).get(mensagem.getId())).withSelfRel(),
 				linkTo(methodOn(MensagemController.class).findPaginated(null, null)).withRel("mensagem"));
 	}
 
-	public static CollectionModel<EntityWrapper<EntidadeMensagem>> toResponse(Page<EntidadeMensagem> page,
+	public static EmbeddedWrapper wrap(EntidadeMensagem mensagem) {
+		return wrappers.wrap(toResponse(mensagem), listaMensagem);
+	}
+
+	public static CollectionModel<EmbeddedWrapper> toResponse(Page<EntidadeMensagem> page,
 			int currentPage) {
-		List<EntityWrapper<EntidadeMensagem>> lista = page.getContent().stream().map(MensagemAssembler::toResponse)
+		List<EmbeddedWrapper> lista = page.getContent().stream().map(MensagemAssembler::wrap)
 				.collect(Collectors.toList());
 		List<Link> links = new ArrayList<>();
 		links.add(linkTo(methodOn(MensagemController.class).findPaginated(currentPage, page.getSize())).withSelfRel());
@@ -40,6 +52,6 @@ public class MensagemAssembler {
 		}
 		links.add(linkTo(methodOn(MensagemController.class).findPaginated(page.getTotalPages(), page.getSize()))
 				.withRel(IanaLinkRelations.LAST));
-		return CollectionModel.of(lista, links);
+		return of(lista, links);
 	}
 }

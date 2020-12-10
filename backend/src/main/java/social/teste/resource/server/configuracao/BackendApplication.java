@@ -1,4 +1,4 @@
-package social.teste.backend.configuracao;
+package social.teste.resource.server.configuracao;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,6 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan({ "social.teste.backend" })
+//@Enable
 public class BackendApplication extends SpringBootServletInitializer {
 
 	@Override
