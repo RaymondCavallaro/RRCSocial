@@ -1,4 +1,4 @@
-package social.teste.oauth2.server.configuracao;
+package social.teste.oauth2.server.web.configuracao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import social.teste.oauth2.server.mongo.MongoUserDetailsService;
+import social.teste.oauth2.server.mongo.service.MongoUserDetailsService;
 
 @EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {

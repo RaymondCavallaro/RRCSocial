@@ -1,4 +1,4 @@
-package social.teste.oauth2.server.mongo;
+package social.teste.oauth2.server.mongo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.provider.ClientDetails;
@@ -6,18 +6,22 @@ import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.ClientRegistrationException;
 import org.springframework.stereotype.Component;
 
-import social.teste.resource.server.repository.MensagemRepository;
+import social.teste.oauth2.server.mongo.conversor.ClientDetailsAssembler;
+import social.teste.oauth2.server.mongo.entidade.OauthClientDetails;
+import social.teste.oauth2.server.mongo.repository.OauthClientDetailsRepository;
 
 @Component
 public class MongoClientDetailsService implements ClientDetailsService {
 
 	@Autowired
-	private MensagemRepository mensagemRepository;
+	private OauthClientDetailsRepository clientDetailsRepository;
+	@Autowired
+	private ClientDetailsAssembler assembler;
 
 	@Override
 	public ClientDetails loadClientByClientId(String clientId) throws ClientRegistrationException {
-		// TODO Auto-generated method stub
-		return null;
+		OauthClientDetails details = clientDetailsRepository.findByClientId(clientId);
+		return assembler.assembleClientDetails(details);
 	}
 
 }

@@ -1,13 +1,6 @@
 spring.application.name: teste-social
 server: 
-  port: 8081
+  port: 8080
   servlet: 
     context-path: /teste-social
-
-spring:
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://localhost:8083/auth/realms/baeldung
 

@@ -1,4 +1,4 @@
-package social.teste.oauth2.server.mongo;
+package social.teste.oauth2.server.mongo.service;
 
 import java.util.Collection;
 
@@ -9,13 +9,18 @@ import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.stereotype.Component;
 
-import social.teste.resource.server.repository.MensagemRepository;
+import social.teste.oauth2.server.mongo.conversor.OAuth2AccessTokenAssembler;
+import social.teste.oauth2.server.mongo.entidade.OauthAccessToken;
+import social.teste.oauth2.server.mongo.repository.OauthAccessTokenRepository;
 
 @Component
 public class MongoTokenStore implements TokenStore {
 
 	@Autowired
-	private MensagemRepository mensagemRepository;
+	private OauthAccessTokenRepository oauthAccessTokenRepository;
+
+	@Autowired
+	private OAuth2AccessTokenAssembler oauth2AccessTokenAssembler;
 
 	@Override
 	public OAuth2Authentication readAuthentication(OAuth2AccessToken token) {
@@ -33,11 +38,13 @@ public class MongoTokenStore implements TokenStore {
 
 	@Override
 	public OAuth2AccessToken readAccessToken(String tokenValue) {
-		return null;
+		OauthAccessToken accessToken = oauthAccessTokenRepository.findByToken(tokenValue.getBytes());
+		return oauth2AccessTokenAssembler.assembleOAuth2AccessToken(accessToken);
 	}
 
 	@Override
 	public void removeAccessToken(OAuth2AccessToken token) {
+		oauthAccessTokenRepository.deleteByToken(token.getValue().getBytes());
 	}
 
 	@Override

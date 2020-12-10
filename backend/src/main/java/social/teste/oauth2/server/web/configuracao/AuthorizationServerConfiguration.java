@@ -1,4 +1,5 @@
-package social.teste.oauth2.server.configuracao;
+package social.teste.oauth2.server.web.configuracao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -11,23 +12,23 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 
-import social.teste.oauth2.server.mongo.MongoClientDetailsService;
-import social.teste.oauth2.server.mongo.MongoTokenStore;
+import social.teste.oauth2.server.mongo.service.MongoClientDetailsService;
+import social.teste.oauth2.server.mongo.service.MongoTokenStore;
 
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
 
-//    private final DataSource dataSource;
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
 
+	@Autowired
     private MongoTokenStore tokenStore;
+	@Autowired
     private MongoClientDetailsService clientDetailsService;
 
     public AuthorizationServerConfiguration(final PasswordEncoder passwordEncoder,
                                             final AuthenticationManager authenticationManager) {
-//        this.dataSource = dataSource;
         this.passwordEncoder = passwordEncoder;
         this.authenticationManager = authenticationManager;
     }
