@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
-import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.hateoas.server.core.EmbeddedWrapper;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import social.teste.resource.server.controller.configuracao.MensagemNotFoundException;
+import social.teste.resource.server.controller.configuracao.SecurityUtil;
 import social.teste.resource.server.entidade.EntidadeMensagem;
 import social.teste.resource.server.service.MensagemService;
 
@@ -32,7 +33,9 @@ public class MensagemController {
 	@RequestMapping(method = { RequestMethod.GET }, produces = "application/json")
 	public CollectionModel<EmbeddedWrapper> findPaginated(
 			@RequestParam(value = "page", required = false, defaultValue = "1") Integer page,
-			@RequestParam(value = "size", required = false, defaultValue = "10") Integer size) {
+			@RequestParam(value = "size", required = false, defaultValue = "10") Integer size,
+			@AuthenticationPrincipal OidcUser principal) {
+		SecurityUtil.extraiId(principal);
 		Page<EntidadeMensagem> resultPage = mensagemService.findPaginated(page, size);
 		if (page > resultPage.getTotalPages()) {
 			throw new MensagemNotFoundException();

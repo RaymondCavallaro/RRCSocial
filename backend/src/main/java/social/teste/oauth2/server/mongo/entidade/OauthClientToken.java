@@ -2,21 +2,23 @@ package social.teste.oauth2.server.mongo.entidade;
 
 import java.io.Serializable;
 
-import org.bson.codecs.pojo.annotations.BsonProperty;
 import org.bson.types.Binary;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
+@Document(collection = "oauth_client_token")
 public class OauthClientToken implements Serializable {
 
 	private static final long serialVersionUID = -7830216447254504559L;
 
 	String _id;
-	@BsonProperty(value = "token_id")
+	@Field("token_id")
 	String tokenId;
-	@BsonProperty(value = "authentication_id")
+	@Field("authentication_id")
 	String authenticationId;
-	@BsonProperty(value = "user_name")
+	@Field("user_name")
 	String userName;
-	@BsonProperty(value = "client_id")
+	@Field("client_id")
 	String clientId;
 	Binary token;
 

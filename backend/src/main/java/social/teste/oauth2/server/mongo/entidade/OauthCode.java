@@ -3,7 +3,9 @@ package social.teste.oauth2.server.mongo.entidade;
 import java.io.Serializable;
 
 import org.bson.types.Binary;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "oauth_code")
 public class OauthCode implements Serializable {
 
 	private static final long serialVersionUID = -1765066648443647470L;

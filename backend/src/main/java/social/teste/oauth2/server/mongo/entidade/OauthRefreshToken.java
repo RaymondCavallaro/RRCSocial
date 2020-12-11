@@ -2,26 +2,20 @@ package social.teste.oauth2.server.mongo.entidade;
 
 import java.io.Serializable;
 
-import org.bson.codecs.pojo.annotations.BsonProperty;
 import org.bson.types.Binary;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
+@Document(collection = "oauth_refresh_token")
 public class OauthRefreshToken implements Serializable {
 
 	private static final long serialVersionUID = -6189500565838361102L;
 
 	String _id;
-	@BsonProperty(value = "token_id")
-	String token_id;
+	@Field(value = "token_id")
+	String tokenId;
 	Binary token;
 	Binary authentication;
-
-	public String getToken_id() {
-		return token_id;
-	}
-
-	public void setToken_id(String token_id) {
-		this.token_id = token_id;
-	}
 
 	public Binary getToken() {
 		return token;
@@ -45,6 +39,14 @@ public class OauthRefreshToken implements Serializable {
 
 	public void set_id(String _id) {
 		this._id = _id;
+	}
+
+	public String getTokenId() {
+		return tokenId;
+	}
+
+	public void setTokenId(String tokenId) {
+		this.tokenId = tokenId;
 	}
 
 }

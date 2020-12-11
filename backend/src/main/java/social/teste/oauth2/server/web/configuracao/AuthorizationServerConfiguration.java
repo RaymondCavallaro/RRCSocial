@@ -60,5 +60,4 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
                 .tokenKeyAccess("permitAll()")
                 .checkTokenAccess("isAuthenticated()");
     }
-
 }

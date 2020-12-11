@@ -3,30 +3,32 @@ package social.teste.oauth2.server.mongo.entidade;
 import java.io.Serializable;
 import java.util.Set;
 
-import org.bson.codecs.pojo.annotations.BsonProperty;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
+@Document(collection = "oauth_client_details")
 public class OauthClientDetails implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	String _id;
-	@BsonProperty(value = "client_id")
+	@Field("client_id")
 	String clientId;
-	@BsonProperty(value = "resource_ids")
+	@Field("resource_ids")
 	Set<String> resourceIds;
-	@BsonProperty(value = "client_secret")
+	@Field("client_secret")
 	String clientSecret;
 	Set<String> scope;
-	@BsonProperty(value = "authorized_grant_types")
+	@Field("authorized_grant_types")
 	Set<String> authorizedGrantTypes;
-	@BsonProperty(value = "web_server_redirect_uri")
+	@Field("web_server_redirect_uri")
 	Set<String> webServerRedirectUri;
 	Set<String> authorities;
-	@BsonProperty(value = "access_token_validity")
+	@Field("access_token_validity")
 	Integer accessTokenValidity;
-	@BsonProperty(value = "refresh_token_validity")
+	@Field("refresh_token_validity")
 	Integer refreshTokenValidity;
-	@BsonProperty(value = "additional_information")
+	@Field("additional_information")
 	String additionalInformation;
 	String autoapprove;
 

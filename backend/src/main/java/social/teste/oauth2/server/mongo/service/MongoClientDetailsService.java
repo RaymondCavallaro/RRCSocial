@@ -21,6 +21,9 @@ public class MongoClientDetailsService implements ClientDetailsService {
 	@Override
 	public ClientDetails loadClientByClientId(String clientId) throws ClientRegistrationException {
 		OauthClientDetails details = clientDetailsRepository.findByClientId(clientId);
+		if (details == null) {
+			return null;
+		}
 		return assembler.assembleClientDetails(details);
 	}
 

@@ -15,7 +15,7 @@ public class EntidadeUtil {
 	public static String geraHash(Object... objetos) {
 		List<String> hashs = new ArrayList<>();
 		for (Object object : objetos) {
-			hashs.add(gen.generateId(Optional.of(object).orElse(new Object())).toString());
+			hashs.add(gen.generateId(Optional.ofNullable(object).orElse(new Object())).toString());
 		}
 		return gen.generateId(StringUtils.join(hashs, " ")).toString();
 	}
