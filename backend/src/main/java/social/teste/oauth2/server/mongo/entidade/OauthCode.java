@@ -2,7 +2,6 @@ package social.teste.oauth2.server.mongo.entidade;
 
 import java.io.Serializable;
 
-import org.bson.types.Binary;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "oauth_code")
@@ -12,7 +11,7 @@ public class OauthCode implements Serializable {
 
 	String _id;
 	String code;
-	Binary authentication;
+	String authentication;
 
 	public String getCode() {
 		return code;
@@ -22,11 +21,11 @@ public class OauthCode implements Serializable {
 		this.code = code;
 	}
 
-	public Binary getAuthentication() {
+	public String getAuthentication() {
 		return authentication;
 	}
 
-	public void setAuthentication(Binary authentication) {
+	public void setAuthentication(String authentication) {
 		this.authentication = authentication;
 	}
 

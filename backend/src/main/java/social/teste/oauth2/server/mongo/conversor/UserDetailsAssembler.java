@@ -2,9 +2,10 @@ package social.teste.oauth2.server.mongo.conversor;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
@@ -18,44 +19,14 @@ public class UserDetailsAssembler {
 	private GrantedAuthorityAssembler grantedAuthorityAssembler;
 
 	public UserDetails assembleUserDetails(Users user, List<Authorities> authorities) {
-		return new UserDetails() {
-
-			@Override
-			public boolean isEnabled() {
-				return user.isEnabled();
-			}
-
-			@Override
-			public boolean isCredentialsNonExpired() {
-				return true;
-			}
-
-			@Override
-			public boolean isAccountNonLocked() {
-				return true;
-			}
-
-			@Override
-			public boolean isAccountNonExpired() {
-				return true;
-			}
-
-			@Override
-			public String getUsername() {
-				return user.getUsername();
-			}
-
-			@Override
-			public String getPassword() {
-				return user.getPassword();
-			}
-
-			@Override
-			public Collection<? extends GrantedAuthority> getAuthorities() {
-				return grantedAuthorityAssembler
-						.assembleGrantedAuthorities(authorities.stream().map(Authorities::getAuthority));
-			}
-		};
+		return new User(user.getUsername(), user.getPassword(), user.isEnabled(), true, true, true,
+				grantedAuthorityAssembler
+						.assembleGrantedAuthorities(authorities.stream().map(Authorities::getAuthority)));
 	}
 
+	public UserDetails assembleUserDetails(Map<String, Object> principal) {
+		return new User((String) principal.get("username"), (String) principal.get("password"),
+				(boolean) principal.get("enabled"), true, true, true, grantedAuthorityAssembler
+						.assembleGrantedAuthorities((Collection<Map<String, String>>) principal.get("authorities")));
+	}
 }

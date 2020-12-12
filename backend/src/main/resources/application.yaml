@@ -4,3 +4,7 @@ server:
   servlet: 
     context-path: /teste-social
 
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8080/profile/me

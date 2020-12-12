@@ -2,7 +2,6 @@ package social.teste.oauth2.server.mongo.entidade;
 
 import java.io.Serializable;
 
-import org.bson.types.Binary;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -14,14 +13,14 @@ public class OauthAccessToken implements Serializable {
 	String _id;
 	@Field(value = "token_id")
 	String tokenId;
-	Binary token;
+	String token;
 	@Field(value = "authentication_id")
 	String authenticationId;
 	@Field(value = "user_name")
 	String userName;
 	@Field(value = "client_id")
 	String clientId;
-	Binary authentication;
+	String authentication;
 	@Field(value = "refresh_token")
 	String refreshToken;
 
@@ -33,11 +32,11 @@ public class OauthAccessToken implements Serializable {
 		this.tokenId = tokenId;
 	}
 
-	public Binary getToken() {
+	public String getToken() {
 		return token;
 	}
 
-	public void setToken(Binary token) {
+	public void setToken(String token) {
 		this.token = token;
 	}
 
@@ -65,11 +64,11 @@ public class OauthAccessToken implements Serializable {
 		this.clientId = clientId;
 	}
 
-	public Binary getAuthentication() {
+	public String getAuthentication() {
 		return authentication;
 	}
 
-	public void setAuthentication(Binary authentication) {
+	public void setAuthentication(String authentication) {
 		this.authentication = authentication;
 	}
 

@@ -13,6 +13,7 @@ import social.teste.oauth2.server.mongo.entidade.Authorities;
 import social.teste.oauth2.server.mongo.entidade.Users;
 import social.teste.oauth2.server.mongo.repository.AuthoritiesRepository;
 import social.teste.oauth2.server.mongo.repository.UsersRepository;
+import social.teste.oauth2.server.web.controller.configuracao.SecurityUtil;
 
 @Component
 public class MongoUserDetailsService implements UserDetailsService {
@@ -26,7 +27,7 @@ public class MongoUserDetailsService implements UserDetailsService {
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		Users user = usersRepository.findByUsername(username);
+		Users user = usersRepository.findByUsernameAndClientId(username, SecurityUtil.extraiUsuario().getUsername());
 		if (user == null) {
 			return null;
 		}

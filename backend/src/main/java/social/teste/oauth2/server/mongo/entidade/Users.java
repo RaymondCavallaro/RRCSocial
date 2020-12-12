@@ -2,12 +2,16 @@ package social.teste.oauth2.server.mongo.entidade;
 
 import java.io.Serializable;
 
+import org.springframework.data.mongodb.core.mapping.Field;
+
 public class Users implements Serializable {
 
 	private static final long serialVersionUID = 2884117363612428012L;
 
 	String _id;
 	String username;
+	@Field("client_id")
+	String clientId;
 	String password;
 	boolean enabled;
 
@@ -41,6 +45,14 @@ public class Users implements Serializable {
 
 	public void set_id(String _id) {
 		this._id = _id;
+	}
+
+	public String getClientId() {
+		return clientId;
+	}
+
+	public void setClientId(String clientId) {
+		this.clientId = clientId;
 	}
 
 }

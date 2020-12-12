@@ -6,8 +6,12 @@ import social.teste.oauth2.server.mongo.entidade.OauthAccessToken;
 
 public interface OauthAccessTokenRepository extends MongoRepository<OauthAccessToken, String> {
 
-	OauthAccessToken findByToken(byte[] bytes);
+	OauthAccessToken findByTokenId(String token);
 
-	void deleteByToken(byte[] bytes);
+	void deleteByTokenId(String token);
+
+	void deleteByRefreshToken(String token);
+
+	OauthAccessToken findByAuthentication(String code);
 
 }

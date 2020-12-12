@@ -28,7 +28,7 @@ public class MensagemAssembler {
 
 	public static EntityModel<EntidadeMensagem> toResponse(EntidadeMensagem mensagem) {
 		return of(mensagem, linkTo(methodOn(MensagemController.class).get(mensagem.getId())).withSelfRel(),
-				linkTo(methodOn(MensagemController.class).findPaginated(null, null, null)).withRel("mensagem"));
+				linkTo(methodOn(MensagemController.class).findPaginated(null, null)).withRel("mensagem"));
 	}
 
 	public static EmbeddedWrapper wrap(EntidadeMensagem mensagem) {
@@ -40,17 +40,17 @@ public class MensagemAssembler {
 		List<EmbeddedWrapper> lista = page.getContent().stream().map(MensagemAssembler::wrap)
 				.collect(Collectors.toList());
 		List<Link> links = new ArrayList<>();
-		links.add(linkTo(methodOn(MensagemController.class).findPaginated(currentPage, page.getSize(), null)).withSelfRel());
-		links.add(linkTo(methodOn(MensagemController.class).findPaginated(1, page.getSize(), null))
+		links.add(linkTo(methodOn(MensagemController.class).findPaginated(currentPage, page.getSize())).withSelfRel());
+		links.add(linkTo(methodOn(MensagemController.class).findPaginated(1, page.getSize()))
 				.withRel(IanaLinkRelations.FIRST));
 		if (currentPage != 1) {
-			links.add(linkTo(methodOn(MensagemController.class).findPaginated(currentPage - 1, page.getSize(), null))
+			links.add(linkTo(methodOn(MensagemController.class).findPaginated(currentPage - 1, page.getSize()))
 					.withRel(IanaLinkRelations.PREVIOUS));
 		} else if (currentPage != page.getTotalPages()) {
-			links.add(linkTo(methodOn(MensagemController.class).findPaginated(currentPage + 1, page.getSize(), null))
+			links.add(linkTo(methodOn(MensagemController.class).findPaginated(currentPage + 1, page.getSize()))
 					.withRel(IanaLinkRelations.NEXT));
 		}
-		links.add(linkTo(methodOn(MensagemController.class).findPaginated(page.getTotalPages(), page.getSize(), null))
+		links.add(linkTo(methodOn(MensagemController.class).findPaginated(page.getTotalPages(), page.getSize()))
 				.withRel(IanaLinkRelations.LAST));
 		return of(lista, links);
 	}

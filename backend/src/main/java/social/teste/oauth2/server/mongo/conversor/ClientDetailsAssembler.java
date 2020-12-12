@@ -17,11 +17,12 @@ import social.teste.oauth2.server.mongo.entidade.OauthClientDetails;
 @Component
 public class ClientDetailsAssembler {
 
-	public static ObjectMapper om = new ObjectMapper();
+	@Autowired
+	public ObjectMapper om;
 
 	@Autowired
 	private GrantedAuthorityAssembler grantedAuthorityAssembler;
-	
+
 	public ClientDetails assembleClientDetails(OauthClientDetails details) {
 		return new ClientDetails() {
 
@@ -77,7 +78,7 @@ public class ClientDetailsAssembler {
 
 			@Override
 			public Collection<GrantedAuthority> getAuthorities() {
-				return grantedAuthorityAssembler.assembleGrantedAuthorities(details.getAuthorities());
+				return grantedAuthorityAssembler.assembleGrantedAuthoritiesFromCollection(details.getAuthorities());
 			}
 
 			@Override
