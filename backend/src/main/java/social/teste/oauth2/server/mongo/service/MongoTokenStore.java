@@ -18,9 +18,11 @@ import social.teste.oauth2.server.mongo.conversor.OAuth2RefreshTokenAssembler;
 import social.teste.oauth2.server.mongo.entidade.OauthAccessToken;
 import social.teste.oauth2.server.mongo.entidade.OauthCode;
 import social.teste.oauth2.server.mongo.entidade.OauthRefreshToken;
+import social.teste.oauth2.server.mongo.entidade.Users;
 import social.teste.oauth2.server.mongo.repository.OauthAccessTokenRepository;
 import social.teste.oauth2.server.mongo.repository.OauthCodeRepository;
 import social.teste.oauth2.server.mongo.repository.OauthRefreshTokenRepository;
+import social.teste.oauth2.server.mongo.repository.UsersRepository;
 
 @Component
 public class MongoTokenStore implements TokenStore {
@@ -31,6 +33,8 @@ public class MongoTokenStore implements TokenStore {
 	private OauthRefreshTokenRepository oauthRefreshTokenRepository;
 	@Autowired
 	private OauthCodeRepository oauthCodeRepository;
+	@Autowired
+	private UsersRepository usersRepository;
 
 	@Autowired
 	private OAuth2AuthenticationAssembler oauth2AuthenticationAssembler;
@@ -71,9 +75,10 @@ public class MongoTokenStore implements TokenStore {
 	}
 
 	private void storeAuthentication(OAuth2Authentication authentication) throws JsonMappingException, JsonProcessingException {
-		String authenticationId = (String) authentication.getDetails();
+		String authenticationId = oauth2AuthenticationAssembler.assembleAuthenticationCode(authentication);
 		if (authenticationId == null) {
-			OauthCode auth = oauth2AuthenticationAssembler.assembleOauthCode(authentication);
+			Users user = usersRepository.findByUsernameAndClientId(authentication.getName(), authentication.getOAuth2Request().getClientId());
+			OauthCode auth = oauth2AuthenticationAssembler.assembleOauthCode(authentication, user);
 			oauthCodeRepository.save(auth);
 		}
 	}

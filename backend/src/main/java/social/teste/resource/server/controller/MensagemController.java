@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import social.teste.oauth2.server.web.controller.configuracao.SecurityUtil;
 import social.teste.resource.server.controller.configuracao.MensagemNotFoundException;
 import social.teste.resource.server.entidade.EntidadeMensagem;
 import social.teste.resource.server.service.MensagemService;

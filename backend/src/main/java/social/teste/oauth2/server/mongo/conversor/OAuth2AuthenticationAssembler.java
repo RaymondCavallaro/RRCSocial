@@ -2,6 +2,7 @@ package social.teste.oauth2.server.mongo.conversor;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.UUID;
@@ -20,6 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import social.teste.oauth2.server.mongo.entidade.OauthAccessToken;
 import social.teste.oauth2.server.mongo.entidade.OauthCode;
+import social.teste.oauth2.server.mongo.entidade.Users;
 
 @Component
 public class OAuth2AuthenticationAssembler {
@@ -37,31 +39,34 @@ public class OAuth2AuthenticationAssembler {
 		OauthAccessToken newToken = new OauthAccessToken();
 		newToken.setToken(om.writeValueAsString(token));
 		newToken.setTokenId(token.getValue());
-		newToken.setAuthentication(assembleAuthenticationString(authentication));
+		newToken.setAuthentication(om.writeValueAsString(authentication));
 		newToken.setRefreshToken(token.getRefreshToken().getValue());
 
 		return newToken;
 	}
 
-	public OauthCode assembleOauthCode(OAuth2Authentication authentication)
+	public OauthCode assembleOauthCode(OAuth2Authentication authentication, Users user)
 			throws JsonMappingException, JsonProcessingException {
-		OauthCode auth = new OauthCode();
-		auth.setCode(UUID.randomUUID().toString());
-		auth.setAuthentication(assembleAuthenticationString(authentication));
+		String code = UUID.randomUUID().toString();
 
-		authentication.setDetails(auth.getCode());
+		Map<String, Object> map = new HashMap<>();
+		map.put("authenticationCode", code);
+		map.put("user", user);
+		authentication.setDetails(map);
+
+		OauthCode auth = new OauthCode();
+		auth.setCode(code);
+		auth.setAuthentication(om.writeValueAsString(authentication));
 
 		return auth;
-	}
-
-	public String assembleAuthenticationString(OAuth2Authentication authentication)
-			throws JsonMappingException, JsonProcessingException {
-		return om.writeValueAsString(authentication);
 	}
 
 	public OAuth2Authentication assembleOAuth2Authentication(String authenticationString)
 			throws JsonMappingException, JsonProcessingException {
 		Map<String, Object> oldAu = om.readValue(authenticationString, Map.class);
+		Map<String, Object> detailsMap = (Map<String, Object>) oldAu.get("details");
+		Map<String, Object> userMap = (Map<String, Object>) detailsMap.get("user");
+		Users user = om.readValue(om.writeValueAsString(userMap), Users.class);
 		Map<String, Object> requestMap = (Map<String, Object>) oldAu.get("oauth2Request");
 		OAuth2Request oauth2Request = new OAuth2Request((Map<String, String>) requestMap.get("requestParameters"),
 				(String) requestMap.get("clientId"),
@@ -94,7 +99,10 @@ public class OAuth2AuthenticationAssembler {
 
 			@Override
 			public Object getPrincipal() {
-				return userDetailsAssembler.assembleUserDetails((Map<String, Object>) oldUa.get("principal"));
+				return userDetailsAssembler.assembleUserDetailsFromGrantedAuthority(user,
+						grantedAuthorityAssembler.assembleGrantedAuthorities(
+								(Collection<Map<String, String>>) ((Map<String, Object>) oldUa.get("principal"))
+										.get("authorities")));
 			}
 
 			@Override
@@ -113,7 +121,10 @@ public class OAuth2AuthenticationAssembler {
 						.assembleGrantedAuthorities((Collection<Map<String, String>>) oldUa.get("authorities"));
 			}
 		};
-		return new OAuth2Authentication(oauth2Request, userAuthentication);
+		OAuth2Authentication authentication = new OAuth2Authentication(oauth2Request, userAuthentication);
+		detailsMap.put("user", user);
+		authentication.setDetails(detailsMap);
+		return authentication;
 	}
 
 	public OAuth2Authentication assembleOAuth2Authentication(OauthCode auth)
@@ -122,6 +133,10 @@ public class OAuth2AuthenticationAssembler {
 	}
 
 	public String assembleAuthenticationCode(OAuth2Authentication authentication) {
-		return (String) authentication.getDetails();
+		Map<String, Object> map = (Map<String, Object>) authentication.getDetails();
+		if (map != null) {
+			return (String) map.get("authenticationCode");
+		}
+		return null;
 	}
 }
