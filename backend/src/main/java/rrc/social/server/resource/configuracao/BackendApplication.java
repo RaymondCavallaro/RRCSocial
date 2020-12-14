@@ -7,7 +7,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({ "social.teste.resource.server", "social.teste.oauth2.server.mongo", "social.teste.oauth2.server.web" })
+@ComponentScan({ "rrc.social.server.resource", "rrc.social.server.oauth2.mongo", "rrc.social.server.oauth2.web" })
 public class BackendApplication extends SpringBootServletInitializer {
 
 	@Override
