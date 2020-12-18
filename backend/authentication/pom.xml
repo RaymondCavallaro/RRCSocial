@@ -7,16 +7,15 @@
 	<groupId>rrc.social</groupId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<artifactId>backend</artifactId>
+	<artifactId>authentication</artifactId>
 
 	<packaging>pom</packaging>
-	<name>backend</name>
-	<description>Backend RrcSocial</description>
+	<name>authentication</name>
+	<description>Authentication RrcSocial</description>
 
 	<modules>
-		<module>parent</module>
-		<module>authentication</module>
-		<module>discovery</module>
-		<module>resource</module>
+		<module>common</module>
+		<module>mongo</module>
+		<module>service</module>
 	</modules>
 </project>

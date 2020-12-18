@@ -1,0 +1,11 @@
+spring:
+  application.name: authserviceserver: 
+  port: 8081
+  servlet.context-path: /
+eureka:
+  client:
+    serviceUrl.defaultZone: http://${registry.host:localhost}:${registry.port:8082}/eureka/
+    healthcheck.enabled: true
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2

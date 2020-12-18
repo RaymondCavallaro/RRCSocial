@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>rrc.social</groupId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<artifactId>parent</artifactId>
+
+	<packaging>pom</packaging>
+	<name>parent</name>
+	<description>Parent RrcSocial</description>
+
+	<properties>
+		<self.groupId>rrc.social</self.groupId>
+		<self.auth.groupId>${self.groupId}.auth</self.auth.groupId>
+		<self.version>0.0.1-SNAPSHOT</self.version>
+
+		<java.version>11</java.version>
+
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+
+		<spring.boot.version>2.3.1.RELEASE</spring.boot.version>
+		<infinispan.version>10.1.8.Final</infinispan.version>
+		<spring-cloud.version>Hoxton.SR9</spring-cloud.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-parent</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>${self.auth.groupId}</groupId>
+				<artifactId>common</artifactId>
+				<version>${self.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${self.auth.groupId}</groupId>
+				<artifactId>mongo</artifactId>
+				<version>${self.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-configuration-processor</artifactId>
+				<version>${spring.boot.version}</version>
+				<optional>true</optional>
+			</dependency>
+
+			<!-- <dependency> -->
+			<!-- <groupId>org.postgresql</groupId> -->
+			<!-- <artifactId>postgresql</artifactId> -->
+			<!-- <version>42.2.18</version> -->
+			<!-- <scope>runtime</scope> -->
+			<!-- </dependency> -->
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<version>${spring.boot.version}</version>
+				<scope>test</scope>
+				<exclusions>
+					<exclusion>
+						<groupId>org.junit.vintage</groupId>
+						<artifactId>junit-vintage-engine</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.1</version>
+					<configuration>
+						<!-- <parameters>true</parameters> -->
+						<source>${maven.compiler.source}</source>
+						<target>${maven.compiler.target}</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.2.0</version>
+					<!-- <configuration> -->
+					<!-- <archive> -->
+					<!-- <manifest> -->
+					<!-- <mainClass>${start-class}</mainClass> -->
+					<!-- <addDefaultImplementationEntries>true</addDefaultImplementationEntries> -->
+					<!-- </manifest> -->
+					<!-- </archive> -->
+					<!-- </configuration> -->
+				</plugin>
+				<plugin>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>3.3.1</version>
+					<!-- <configuration> -->
+					<!-- <archive> -->
+					<!-- <manifest> -->
+					<!-- <mainClass>${start-class}</mainClass> -->
+					<!-- <addDefaultImplementationEntries>true</addDefaultImplementationEntries> -->
+					<!-- </manifest> -->
+					<!-- </archive> -->
+					<!-- </configuration> -->
+				</plugin>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.2.0</version>
+					<!-- <configuration> -->
+					<!-- <delimiters> -->
+					<!-- <delimiter>@</delimiter> -->
+					<!-- </delimiters> -->
+					<!-- <useDefaultDelimiters>false</useDefaultDelimiters> -->
+					<!-- </configuration> -->
+				</plugin>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>${spring.boot.version}</version>
+					<!-- <executions> -->
+					<!-- <execution> -->
+					<!-- <id>repackage</id> -->
+					<!-- <goals> -->
+					<!-- <goal>repackage</goal> -->
+					<!-- </goals> -->
+					<!-- <configuration> -->
+					<!-- <mainClass>${start-class}</mainClass> -->
+					<!-- </configuration> -->
+					<!-- </execution> -->
+					<!-- </executions> -->
+					<!-- <configuration> -->
+					<!-- <mainClass>${start-class}</mainClass> -->
+					<!-- </configuration> -->
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
