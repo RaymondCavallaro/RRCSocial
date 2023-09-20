@@ -2,7 +2,7 @@
 ## Plan
 1. create a social network using the deprecated open social as basis
 2. make algoritm social plugins work in it
-3. transform it to work distributed with blockchain tecnology
+3. transform it to work distributed with blockchain technology
 
 ## More
 
